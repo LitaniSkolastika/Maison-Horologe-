@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maison Horologe — Timeless Watches. Enduring Stories.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0B0B0A;--dark-brown:#2A211B;--gold:#B08D57;--light-gold:#D4B47A;--cream:#F1E8D8;--ivory:#F8F4EA;--beige:#D8CCBA;--text-dark:#171513;
+--serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;--sans:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;--ease:cubic-bezier(.2,.6,.2,1);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:72px;height:100%}
+body{margin:0;background:var(--black);color:var(--cream);font:300 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.08;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(3rem,7.5vw,6.6rem)}h2{font-size:clamp(2.1rem,4.4vw,3.8rem)}h3{font-size:1.6rem;font-weight:400}
+p{margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+section{padding:clamp(56px,9vw,128px) 0}
+.label{font:500 .7rem/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.rule{width:56px;height:1px;background:var(--gold);border:0;margin:28px 0}
+.light{background:var(--ivory);color:var(--text-dark)}.cream{background:var(--cream);color:var(--text-dark)}.brown{background:var(--dark-brown)}
+.muted{opacity:.72;max-width:52ch}
+:focus-visible{outline:1px solid var(--light-gold);outline-offset:3px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 28px;border:1px solid var(--gold);border-radius:2px;font:500 .72rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:background .4s var(--ease),color .4s var(--ease),border-color .4s}
+.btn.primary{background:var(--gold);color:var(--black)}.btn.primary:hover{background:var(--light-gold)}
+.btn.ghost{background:transparent;color:var(--cream)}.btn.ghost:hover{background:var(--cream);color:var(--black);border-color:var(--cream)}
+.light .btn.ghost,.cream .btn.ghost{color:var(--text-dark);border-color:var(--text-dark)}.light .btn.ghost:hover,.cream .btn.ghost:hover{background:var(--text-dark);color:var(--ivory)}
+.arr{display:inline-block;transition:transform .3s var(--ease)}a:hover .arr,.btn:hover .arr{transform:translateX(6px)}
+.link{font:500 .7rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);position:relative;padding-bottom:6px}
+.link::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:24px;background:var(--gold);transition:width .4s var(--ease)}.link:hover::after{width:100%}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .4s var(--ease),border-color .4s;border-bottom:1px solid transparent}
+nav.solid{background:rgba(11,11,10,.96);border-color:rgba(176,141,87,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:400 1.45rem/1 var(--serif);letter-spacing:.14em;text-transform:uppercase}.logo small{display:block;font:400 .5rem var(--sans);letter-spacing:.4em;color:var(--gold);margin-top:5px}
+.menu{display:flex;gap:34px;list-style:none;margin:0;padding:0}
+.menu a{font:400 .68rem var(--sans);letter-spacing:.18em;text-transform:uppercase;position:relative;padding:6px 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .35s var(--ease)}.menu a:hover::after{width:100%}
+.tools{display:flex;align-items:center;gap:20px}
+.ic{background:none;border:0;color:var(--cream);padding:6px;cursor:pointer;display:grid}.ic svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.2}
+.tools .btn{padding:12px 18px}.burger{display:none}
+
+/* hero */
+.hero{min-height:100vh;min-height:100svh;position:relative;display:flex;align-items:flex-end;padding:120px 0 72px;overflow:hidden;background:radial-gradient(ellipse at 72% 45%,#3a2c20 0%,#1a130e 42%,var(--black) 78%)}
+.hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.012) 0 2px,transparent 2px 5px);pointer-events:none}
+.hero .art{position:absolute;right:-4%;top:50%;width:min(62vw,760px);transform:translateY(-50%);opacity:0;animation:rise 1.8s .2s var(--ease) forwards}
+.hero .txt{position:relative;z-index:2;max-width:640px;opacity:0;animation:rise 1.2s .5s var(--ease) forwards}
+.hero h1{margin:22px 0}.hero .muted{margin-bottom:38px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1}}
+.hero .art{--y:-50%}@keyframes rise{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
+
+/* intro */
+.split{display:grid;grid-template-columns:1fr 2fr;gap:clamp(24px,6vw,96px);align-items:start}
+.intro h2{margin-bottom:24px;max-width:18ch}
+
+/* watches */
+.w{--case:#B08D57;--dial:#F1E8D8;--bg:#2A211B;background:radial-gradient(circle at 50% 40%,color-mix(in srgb,var(--bg),#fff 14%),var(--bg) 70%);overflow:hidden}
+.w svg{width:100%;height:100%;transition:transform 1.2s var(--ease)}
+.card:hover .w svg{transform:scale(1.045)}
+.card .w{aspect-ratio:4/5;border-radius:2px}
+.card .meta{padding:20px 0 0;border-bottom:1px solid rgba(176,141,87,.0);transition:border-color .4s}
+.card:hover .meta{border-color:var(--gold)}
+.card .b{font:500 .66rem var(--sans);letter-spacing:.22em;color:var(--gold);text-transform:uppercase}
+.card h3{margin:6px 0 4px;transition:color .3s}.card:hover h3{color:var(--light-gold)}
+.card .d{font-size:.82rem;opacity:.65}.card .p{font:400 .95rem var(--sans);margin:12px 0 14px}
+.card .link{opacity:.0;transition:opacity .4s}.card:hover .link,.card:focus-within .link{opacity:1}
+.light .card .d{opacity:.6}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(36px,5vw,64px)}
+.head p{max-width:38ch;opacity:.7}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px) 36px}
+.g3 .card:nth-child(3n+2){margin-top:56px}
+.filters{display:flex;gap:28px;overflow-x:auto;padding:0 0 18px;margin-bottom:44px;border-bottom:1px solid rgba(23,21,19,.18);scrollbar-width:none}
+.filters button{background:none;border:0;border-bottom:1px solid transparent;padding:6px 0;font:500 .68rem var(--sans);letter-spacing:.18em;color:var(--text-dark);opacity:.55;cursor:pointer;white-space:nowrap;transition:opacity .3s,border-color .3s}
+.filters button:hover,.filters button[aria-pressed=true]{opacity:1;border-color:var(--gold)}
+.card[hidden]{display:none}
+
+/* detail */
+.detail{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.detail .w{aspect-ratio:1/1.05}
+dl{margin:32px 0;display:grid;grid-template-columns:auto 1fr;gap:0 40px}
+dt,dd{margin:0;padding:13px 0;border-bottom:1px solid rgba(23,21,19,.15)}dt{font:500 .66rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}dd{font-family:var(--serif);font-size:1.25rem}
+
+/* heritage */
+.heritage h2{max-width:16ch;color:var(--cream);margin:20px 0 28px}
+.heritage .split{grid-template-columns:1fr 1fr;align-items:center}
+.heritage .w{aspect-ratio:4/5}
+.craft{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:56px}
+.craft div{border-top:1px solid var(--gold);padding-top:24px}
+.craft b{display:block;font:300 4rem/1 var(--serif);color:var(--gold);margin-bottom:12px}
+.craft p{opacity:.72;margin-top:8px;font-size:.95rem}
+
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:48px 0}
+.trust div{padding:0 28px;border-left:1px solid rgba(23,21,19,.18)}.trust div:first-child{padding-left:0;border:0}
+.trust .label{display:block;margin-bottom:12px}.trust p{font-size:.92rem;opacity:.75}
+
+/* journal */
+.jr{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+.jr .w{aspect-ratio:3/2;margin-bottom:20px}.jr .card:first-child .w{aspect-ratio:4/3}
+.jr h3{margin:8px 0 10px;font-size:1.7rem}.jr p{font-size:.92rem;opacity:.68;margin-bottom:14px}
+
+/* testimonial */
+.quote{text-align:center;max-width:820px;margin:0 auto}
+.quote blockquote{margin:0}.quote .qm{font:300 6rem/.6 var(--serif);color:var(--gold);display:block;height:48px}
+.quote p{font:300 clamp(1.5rem,3vw,2.3rem)/1.35 var(--serif);font-style:italic}
+.quote .rule{margin:28px auto}
+.quote cite{font:500 .68rem var(--sans);letter-spacing:.2em;text-transform:uppercase;font-style:normal;opacity:.7}
+.qnav{display:flex;justify-content:center;gap:10px;margin-top:32px}
+.qnav button{width:28px;height:2px;border:0;padding:0;background:rgba(23,21,19,.25);cursor:pointer;position:relative}
+.qnav button::before{content:"";position:absolute;inset:-12px 0}.qnav button[aria-current=true]{background:var(--gold)}
+
+/* consult / final */
+.consult{border-top:1px solid rgba(176,141,87,.35);border-bottom:1px solid rgba(176,141,87,.35)}
+.consult .box{border:1px solid rgba(176,141,87,.5);padding:clamp(40px,7vw,96px);text-align:center;outline:1px solid rgba(176,141,87,.18);outline-offset:10px}
+.consult h2{margin:18px auto 22px;max-width:16ch}.consult .muted{margin:0 auto 36px}.consult .cta-row{justify-content:center}
+.final{text-align:center;padding:clamp(80px,12vw,176px) 0}.final h2{font-size:clamp(2.6rem,7vw,6rem);margin:0 0 20px}.final .muted{margin:0 auto 36px}
+
+/* footer */
+footer{padding:72px 0 40px;border-top:1px solid rgba(176,141,87,.3);font-size:.88rem}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
+footer ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:9px}footer ul a{opacity:.7;transition:opacity .3s,color .3s}footer ul a:hover{opacity:1;color:var(--light-gold)}
+.fb{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:56px;padding-top:24px;border-top:1px solid rgba(241,232,216,.12);font-size:.75rem;opacity:.65}
+.sticky{display:none}
+
+
+body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.08;mix-blend-mode:overlay;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 45%,rgba(212,180,122,.24),transparent 46%);animation:glow 9s ease-in-out infinite alternate}
+@keyframes glow{from{opacity:.5}to{opacity:1}}
+.hero .art{overflow:visible}
+.hero .art svg{animation:float 10s ease-in-out infinite alternate;translate:calc(var(--mx,0)*1px) calc(var(--my,0)*1px);-webkit-mask-image:linear-gradient(transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(transparent,#000 14%,#000 86%,transparent);filter:drop-shadow(0 40px 50px rgba(0,0,0,.6))}
+@keyframes float{to{transform:translateY(-14px) rotate(-1.2deg)}}
+.cue{position:absolute;left:clamp(20px,4vw,48px);bottom:0;width:1px;height:64px;background:linear-gradient(var(--gold),transparent);transform-origin:top;animation:cue 2.8s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+.strip{background:var(--black);border-block:1px solid rgba(176,141,87,.3);overflow:hidden;padding:22px 0}
+.track{display:flex;width:max-content;animation:mq 80s linear infinite}.track>*{margin-right:56px;white-space:nowrap}
+.track span{font:300 1.5rem var(--serif);letter-spacing:.3em;text-transform:uppercase;opacity:.7}.track i{color:var(--gold);font-style:normal;font-size:.6rem;align-self:center}
+@keyframes mq{to{transform:translateX(-50%)}}
+.ww{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}
+.ww>span{display:inline-block;transform:translateY(112%);transition:transform 1.2s var(--ease) calc(var(--i)*80ms)}
+.hero .ww>span{transition-delay:calc(.7s + var(--i)*100ms)}
+.in .ww>span,.ww.in>span{transform:none}
+.w{clip-path:inset(0 0 100% 0);transition:clip-path 1.6s var(--ease)}
+.in .w,.w.in,.hero .w{clip-path:inset(0)}
+.w svg{scale:1.18;transition:scale 2.2s var(--ease),transform 1.2s var(--ease)}
+.in .w svg,.w.in svg,.hero .w svg{scale:1}
+.w:not(.art){position:relative}
+.w:not(.art)::after{content:"";position:absolute;inset:14px;border:1px solid rgba(212,180,122,.35);pointer-events:none;transition:inset .7s var(--ease),border-color .7s}
+.card:hover .w::after{inset:8px;border-color:rgba(212,180,122,.75)}
+.rule{transform:scaleX(0);transform-origin:left;transition:transform 1.4s .35s var(--ease)}.quote .rule{transform-origin:center}.in .rule,.rule.in{transform:none}
+.craft>div,.trust>div{opacity:0;translate:0 18px;transition:opacity .9s var(--ease),translate .9s var(--ease)}
+.craft.in>div,.trust.in>div{opacity:1;translate:0 0}
+.craft>div:nth-child(2),.trust>div:nth-child(2){transition-delay:.15s}.craft>div:nth-child(3),.trust>div:nth-child(3){transition-delay:.3s}.trust>div:nth-child(4){transition-delay:.45s}
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--cream);transform:translateX(-101%);transition:transform .55s var(--ease)}
+.btn.primary::before{background:var(--light-gold)}.light .btn.ghost::before,.cream .btn.ghost::before{background:var(--text-dark)}.btn:hover::before{transform:none}
+.btn.primary:hover,.btn.ghost:hover,.light .btn.ghost:hover,.cream .btn.ghost:hover{background:transparent}.btn.primary:hover{background:var(--gold)}
+#bar{position:fixed;top:0;left:0;right:0;height:2px;background:var(--gold);transform-origin:left;transform:scaleX(0);z-index:60}
+#cur{display:none;position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid var(--gold);border-radius:50%;pointer-events:none;z-index:95;opacity:0;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),opacity .3s,background .3s}
+#cur.on{opacity:1}#cur.big{width:68px;height:68px;margin:-34px 0 0 -34px;background:rgba(176,141,87,.14)}
+@media(hover:hover) and (pointer:fine){#cur{display:block}}
+@media(prefers-reduced-motion:reduce){.ww>span{transform:none}.w{clip-path:none}.w svg{scale:1}.rule{transform:none}.craft>div,.trust>div{opacity:1;translate:none}.track,#cur,.cue{display:none}}
+/* reveal */
+.rv{opacity:0;translate:0 20px;transition:opacity .9s var(--ease),translate .9s var(--ease)}.rv.in{opacity:1;translate:0 0}
+
+@media(max-width:1000px){
+ .g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}.g3 .card:nth-child(3n+2){margin-top:0}
+ .trust{grid-template-columns:repeat(2,1fr);row-gap:36px}.trust div:nth-child(3){padding-left:0;border:0}
+ .jr{grid-template-columns:1fr 1fr}.jr .card:first-child{grid-column:1/-1}
+ .fg{grid-template-columns:1fr 1fr}
+}
+@media(max-width:820px){
+ .menu,.tools .btn,.tools .wish{display:none}.burger{display:grid}
+ .menu.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--black);border-bottom:1px solid rgba(176,141,87,.35);padding:12px 20px 20px}
+ .menu.open a{display:block;padding:16px 0;border-bottom:1px solid rgba(241,232,216,.08)}
+ .split,.detail,.heritage .split{grid-template-columns:1fr}
+ .hero{align-items:flex-end;padding-bottom:88px}.hero .art{width:130vw;right:-35%;top:34%}
+ .craft{grid-template-columns:1fr;gap:32px}
+ .jr{grid-template-columns:1fr}
+ .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(11,11,10,.96);border-top:1px solid rgba(176,141,87,.4);gap:10px}
+ .sticky .btn{flex:1;justify-content:center;padding:14px 10px}
+}
+@media(max-width:520px){.g3,.g4{gap:24px 14px}.g3 h3,.g4 h3{font-size:1.2rem}.card .d{font-size:.74rem}.trust{grid-template-columns:1fr}.trust div{padding:0!important;border:0!important}.fg{grid-template-columns:1fr}.card .link{opacity:1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero .art,.hero .txt{opacity:1;translate:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- Watch illustration (placeholder art, swap for real photography) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="watch" viewBox="0 0 400 400"><defs>
+<linearGradient id="gm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".6"/></linearGradient>
+<linearGradient id="gs" x1="0" x2="1"><stop offset="0" stop-color="#100a07"/><stop offset=".5" stop-color="#3d2c1f"/><stop offset="1" stop-color="#100a07"/></linearGradient>
+<radialGradient id="gd"><stop offset=".6" stop-color="#6b4a25" stop-opacity="0"/><stop offset="1" stop-color="#6b4a25" stop-opacity=".3"/></radialGradient>
+<linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".3"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+<path d="M160 0h80l12 112H148z M148 288h104l-12 112h-80z" fill="url(#gs)"/>
+<path d="M168 0l-8 110M232 0l8 110M160 290l8 110M240 290l-8 110" stroke="#B08D57" stroke-opacity=".55" stroke-dasharray="4 5" fill="none"/>
+<path id="lg" d="M140 92l26 8 4 40-28-10zM260 92l-26 8-4 40 28-10zM140 308l26-8 4-40-28 10zM260 308l-26-8-4-40 28 10z" fill="var(--case)"/>
+<path d="M140 92l26 8 4 40-28-10zM260 92l-26 8-4 40 28-10zM140 308l26-8 4-40-28 10zM260 308l-26-8-4-40 28 10z" fill="url(#gm)"/>
+<rect x="332" y="189" width="18" height="22" rx="2" fill="var(--case)"/><rect x="332" y="189" width="18" height="22" rx="2" fill="url(#gm)"/>
+<circle cx="200" cy="200" r="134" fill="var(--case)"/><circle cx="200" cy="200" r="134" fill="url(#gm)"/>
+<circle cx="200" cy="200" r="124" fill="none" stroke="#000" stroke-opacity=".4" stroke-width="2"/><circle cx="200" cy="200" r="116" fill="#000" fill-opacity=".5"/>
+<circle cx="200" cy="200" r="110" fill="var(--dial)"/><circle cx="200" cy="200" r="110" fill="url(#gd)"/>
+<g fill="none" stroke="#2A211B" stroke-opacity=".09"><circle cx="200" cy="200" r="30"/><circle cx="200" cy="200" r="50"/><circle cx="200" cy="200" r="70"/><circle cx="200" cy="200" r="90"/></g>
+<circle cx="200" cy="200" r="102" fill="none" stroke="#171513" stroke-width="5" stroke-dasharray="1 9.47" opacity=".55"/>
+<circle cx="200" cy="200" r="97" fill="none" stroke="#171513" stroke-opacity=".4" stroke-width=".6"/>
+<rect x="197.5" y="106" width="5" height="18" fill="#171513" transform="rotate(0 200 200)"/><rect x="197.5" y="106" width="5" height="12" fill="#171513" transform="rotate(30 200 200)"/><rect x="197.5" y="106" width="5" height="12" fill="#171513" transform="rotate(60 200 200)"/><rect x="197.5" y="106" width="5" height="18" fill="#171513" transform="rotate(90 200 200)"/><rect x="197.5" y="106" width="5" height="12" fill="#171513" transform="rotate(120 200 200)"/><rect x="197.5" y="106" width="5" height="12" fill="#171513" transform="rotate(150 200 200)"/><rect x="197.5" y="106" width="5" height="18" fill="#171513" transform="rotate(180 200 200)"/><rect x="197.5" y="106" width="5" height="12" fill="#171513" transform="rotate(210 200 200)"/><rect x="197.5" y="106" width="5" height="12" fill="#171513" transform="rotate(240 200 200)"/><rect x="197.5" y="106" width="5" height="18" fill="#171513" transform="rotate(270 200 200)"/><rect x="197.5" y="106" width="5" height="12" fill="#171513" transform="rotate(300 200 200)"/><rect x="197.5" y="106" width="5" height="12" fill="#171513" transform="rotate(330 200 200)"/>
+<text x="200" y="158" text-anchor="middle" font-family="Georgia,serif" font-size="9" letter-spacing="4" fill="#171513">MAISON</text>
+<text x="200" y="256" text-anchor="middle" font-family="Georgia,serif" font-size="6.5" letter-spacing="3" fill="#171513" opacity=".7">AUTOMATIC</text>
+<path d="M200 212l-6-20 6-54 6 54z" fill="#171513" transform="rotate(-56 200 200)"/>
+<path d="M200 212l-3.5-20 3.5-82 3.500 82z" fill="#171513" transform="rotate(48 200 200)"/>
+<g><path d="M200 224V102" stroke="#8a3b2a" stroke-width="1.2"/><circle cx="200" cy="200" r="3" fill="#8a3b2a"/><animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="60s" repeatCount="indefinite"/></g>
+<circle cx="200" cy="200" r="4.5" fill="var(--case)"/><circle cx="200" cy="200" r="1.6" fill="#000"/>
+<circle cx="200" cy="200" r="110" fill="url(#gg)"/>
+</symbol></defs></svg>
+
+<nav id="nav">
+ <div class="wrap nav">
+  <a href="#top" class="logo" aria-label="Maison Horologe">Maison Horologe<small>Est. 1987</small></a>
+  <ul class="menu" id="menu">
+   <li><a href="#collection">Collection</a></li><li><a href="#vintage">Vintage Watches</a></li><li><a href="#heritage">Heritage</a></li><li><a href="#journal">Journal</a></li><li><a href="#about">About</a></li>
+  </ul>
+  <div class="tools">
+   <button class="ic" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+   <button class="ic wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.5A4 4 0 0119 10c0 5.500-7 10-7 10z"/></svg></button>
+   <a href="#consult" class="btn ghost">Book Consultation</a>
+   <button class="ic burger" id="burger" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></svg></button>
+  </div>
+ </div>
+</nav>
+
+<header class="hero" id="top">
+ <div class="art w" style="--bg:#1a130e;background:none"><svg viewBox="0 0 400 400" role="img" aria-label="Vintage gold wristwatch on leather strap"><use href="#watch"/></svg></div>
+ <div class="wrap"><div class="txt">
+  <span class="label">Curated vintage timepieces · Private collection</span>
+  <h1>Time, With a History.</h1>
+  <p class="muted">Discover a curated collection of vintage timepieces defined by craftsmanship, character, and timeless design.</p>
+  <div class="cta-row"><a href="#collection" class="btn primary">Explore the Collection <span class="arr">→</span></a><a href="#heritage" class="btn ghost">Discover Our Heritage</a></div>
+ </div></div>
+<div class="cue"></div></header>
+<div class="strip" aria-hidden="true"><div class="track" id="trk"><span>Omega</span><i>◆</i><span>Rolex</span><i>◆</i><span>Longines</span><i>◆</i><span>Jaeger-LeCoultre</span><i>◆</i><span>Universal Genève</span><i>◆</i><span>Heuer</span><i>◆</i><span>Patek Philippe</span><i>◆</i></div></div>
+
+<section class="light intro" id="about"><div class="wrap split">
+ <span class="label rv">The art of horology</span>
+ <div class="rv"><h2>Crafted for those who appreciate the passage of time.</h2><hr class="rule"><p class="muted">Every timepiece in our collection is carefully selected for its design, craftsmanship, history, and enduring character.</p></div>
+</div></section>
+
+<section class="cream" id="vintage"><div class="wrap">
+ <div class="head rv"><div><span class="label">Featured</span><h2 style="margin-top:14px">Selected Timepieces</h2></div><p>A considered collection of vintage watches chosen for their character and craftsmanship.</p></div>
+ <div class="g4" id="featured"></div>
+</div></section>
+
+<section class="light" id="collection"><div class="wrap">
+ <div class="head rv"><div><span class="label">The collection</span><h2 style="margin-top:14px">Browse by Character</h2></div></div>
+ <div class="filters" role="group" aria-label="Filter collection">
+  <button aria-pressed="true" data-f="all">All</button><button aria-pressed="false" data-f="dress">Dress Watches</button><button aria-pressed="false" data-f="diver">Diver</button><button aria-pressed="false" data-f="chrono">Chronograph</button><button aria-pressed="false" data-f="gold">Gold</button><button aria-pressed="false" data-f="steel">Steel</button><button aria-pressed="false" data-f="mech">Mechanical</button>
+ </div>
+ <div class="g3" id="grid"></div>
+</div></section>
+
+<section class="cream"><div class="wrap detail">
+ <div class="w rv" style="--bg:#2A211B;--case:#D4B47A"><svg viewBox="40 40 320 320" role="img" aria-label="Close-up of a 1967 Omega Constellation"><use href="#watch"/></svg></div>
+ <div class="rv"><span class="label">The details</span><h2 style="margin:14px 0 8px">Omega Constellation</h2><p class="muted">Quiet, balanced and unmistakably of its decade. A gold case with a softly aged cream dial, worn in and entirely original.</p>
+ <dl><dt>Brand</dt><dd>Omega</dd><dt>Model</dt><dd>Constellation</dd><dt>Year</dt><dd>1967</dd><dt>Movement</dt><dd>Automatic</dd><dt>Case</dt><dd>18K Gold</dd><dt>Condition</dt><dd>Excellent</dd></dl>
+ <a href="#consult" class="btn ghost">View Full Details <span class="arr">→</span></a></div>
+</div></section>
+
+<section class="brown heritage" id="heritage"><div class="wrap split">
+ <div class="rv"><span class="label">Built to outlast trends</span><h2>Because true luxury never goes out of time.</h2><hr class="rule"><p class="muted">Vintage watches carry more than mechanical precision. They carry stories, craftsmanship, and a design language that continues to speak across generations.</p></div>
+ <div class="w rv" style="--bg:#14100c;--case:#8c6d41"><svg viewBox="60 60 280 280" role="img" aria-label="Mechanical watch in warm low light"><use href="#watch"/></svg></div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="rv"><span class="label">Craftsmanship</span><h2 style="margin-top:14px;max-width:16ch">The beauty is in the details.</h2></div>
+ <div class="craft rv">
+  <div><b>01</b><h3>Mechanical Movement</h3><p>Precision engineered movement built to stand the test of time.</p></div>
+  <div><b>02</b><h3>Fine Materials</h3><p>Gold, stainless steel, sapphire, leather, and materials chosen for lasting character.</p></div>
+  <div><b>03</b><h3>Hand-Finished Details</h3><p>Every detail reveals the craftsmanship behind the timepiece.</p></div>
+ </div>
+</div></section>
+
+<section class="light"><div class="wrap">
+ <div class="rv"><span class="label">Trust</span><h2 style="margin-top:14px;max-width:16ch">Confidence in every timepiece.</h2></div>
+ <div class="trust rv">
+  <div><span class="label">Authenticity verified</span><p>Every watch is carefully inspected.</p></div>
+  <div><span class="label">Condition assessed</span><p>Detailed condition documentation.</p></div>
+  <div><span class="label">Expert curation</span><p>Selected based on craftsmanship and historical significance.</p></div>
+  <div><span class="label">Secure transaction</span><p>Safe and discreet purchasing experience.</p></div>
+ </div>
+ <a href="#" class="btn ghost">Learn About Our Process <span class="arr">→</span></a>
+</div></section>
+
+<section class="cream" id="journal"><div class="wrap">
+ <div class="head rv"><h2>The Watch Journal</h2><a href="#" class="link">All articles</a></div>
+ <div class="jr">
+  <a href="#" class="card rv"><div class="w" style="--bg:#2A211B"><svg viewBox="0 0 400 400"><use href="#watch"/></svg></div><span class="b">History</span><h3>Why Vintage Watches Still Matter</h3><p>On design that outlives fashion, and why older pieces feel more considered.</p><span class="link">Read Article</span></a>
+  <a href="#" class="card rv"><div class="w" style="--bg:#171210;--case:#9a9a94;--dial:#E5DFD2"><svg viewBox="40 40 320 320"><use href="#watch"/></svg></div><span class="b">Education</span><h3>Understanding Mechanical Movements</h3><p>Manual, automatic and what to ask before you buy.</p><span class="link">Read Article</span></a>
+  <a href="#" class="card rv"><div class="w" style="--bg:#3a2c20;--case:#D4B47A"><svg viewBox="40 40 320 320"><use href="#watch"/></svg></div><span class="b">Collecting</span><h3>How to Build a Timeless Watch Collection</h3><p>Start with one watch you will still love in thirty years.</p><span class="link">Read Article</span></a>
+ </div>
+</div></section>
+
+<section class="light"><div class="wrap quote rv">
+ <blockquote><span class="qm" aria-hidden="true">“</span><p id="qt"></p><hr class="rule"><cite id="qa"></cite></blockquote>
+ <div class="qnav" id="qn" aria-label="Testimonials"></div>
+</div></section>
+
+<section class="consult" id="consult"><div class="wrap"><div class="box rv">
+ <span class="label">Private service</span><h2>Looking for something particular?</h2>
+ <p class="muted">Our collection changes with every acquisition. Speak with us about a specific model, era, or style you're looking for.</p>
+ <div class="cta-row"><a href="#" class="btn primary">Request a Private Consultation</a><a href="#" class="btn ghost">Contact Us</a></div>
+</div></div></section>
+
+<section class="final"><div class="wrap rv"><h2>Own a piece of time.</h2><p class="muted">Explore a collection where craftsmanship, history, and timeless design meet.</p><a href="#collection" class="btn primary">Explore Collection <span class="arr">→</span></a></div></section>
+
+<footer><div class="wrap">
+ <div class="fg">
+  <div><a href="#top" class="logo">Maison Horologe<small>Timeless by design.</small></a></div>
+  <div><span class="label">Explore</span><ul><li><a href="#collection">Collection</a></li><li><a href="#vintage">Vintage Watches</a></li><li><a href="#heritage">Heritage</a></li><li><a href="#journal">Journal</a></li><li><a href="#about">About</a></li><li><a href="#consult">Contact</a></li></ul></div>
+  <div><span class="label">Customer</span><ul><li><a href="#">Shipping &amp; Delivery</a></li><li><a href="#">Authenticity</a></li><li><a href="#">Returns</a></li><li><a href="#">Care Guide</a></li><li><a href="#">FAQ</a></li></ul></div>
+  <div><span class="label">Contact</span><ul><li><a href="#">WhatsApp</a></li><li><a href="#">Instagram</a></li><li><a href="#">Email</a></li><li><a href="#">Location</a></li></ul></div>
+ </div>
+ <div class="fb"><span>© 2026 Maison Horologe. All Rights Reserved.</span><span class="label">Timeless by design.</span></div>
+</div></footer>
+
+<div class="sticky"><a href="#collection" class="btn ghost">View Collection</a><a href="#consult" class="btn primary">Enquire</a></div>
+
+<div id="bar"></div><div id="cur"></div>
+<script>
+const P=[
+ {b:'Omega',n:'Seamaster 1968',y:1968,mv:'Automatic',c:'Steel',sz:'36mm',s:'Leather',p:'Rp 48.500.000',t:'diver steel mech',bg:'#2A211B',cs:'#9a9a94'},
+ {b:'Longines',n:'Conquest Dress',y:1962,mv:'Manual',c:'18K Gold',sz:'34mm',s:'Leather',p:'Rp 36.000.000',t:'dress gold mech',bg:'#3a2c20',cs:'#D4B47A'},
+ {b:'Universal Genève',n:'Compax',y:1958,mv:'Manual',c:'Steel',sz:'36mm',s:'Leather',p:'Rp 92.000.000',t:'chrono steel mech',bg:'#171210',cs:'#aaa9a2'},
+ {b:'Rolex',n:'Datejust 1971',y:1971,mv:'Automatic',c:'Steel & Gold',sz:'36mm',s:'Bracelet',p:'Rp 118.000.000',t:'dress gold steel mech',bg:'#2A211B',cs:'#B08D57'},
+ {b:'Heuer',n:'Carrera 1969',y:1969,mv:'Manual',c:'Steel',sz:'35mm',s:'Leather',p:'Rp 74.000.000',t:'chrono steel mech',bg:'#14100c',cs:'#8f8f89'},
+ {b:'Jaeger-LeCoultre',n:'Memovox',y:1964,mv:'Manual',c:'18K Gold',sz:'35mm',s:'Leather',p:'Rp 64.500.000',t:'gold dress mech',bg:'#3a2c20',cs:'#c9a560'}
+];
+const card=(p,full)=>`<a href="#consult" class="card rv" data-t="${p.t}"><div class="w" style="--bg:${p.bg};--case:${p.cs}"><svg viewBox="40 40 320 320" role="img" aria-label="${p.b} ${p.n}"><use href="#watch"/></svg></div><div class="meta"><span class="b">${p.b}</span><h3>${p.n}</h3><div class="d">${full?`${p.y} · ${p.mv} · ${p.c}`:`${p.mv} · ${p.sz} · ${p.s}`}</div><div class="p">${p.p}</div><span class="link">View Timepiece <span class="arr">→</span></span></div></a>`;
+document.getElementById('featured').innerHTML=P.slice(0,4).map(p=>card(p)).join('');
+document.getElementById('grid').innerHTML=P.map(p=>card(p,1)).join('');
+document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+ document.querySelectorAll('#grid .card').forEach(c=>c.hidden=!(b.dataset.f==='all'||c.dataset.t.split(' ').includes(b.dataset.f)));
+});
+// nav
+const nav=document.getElementById('nav'),m=document.getElementById('menu'),bg=document.getElementById('burger');
+const sc=()=>nav.classList.toggle('solid',scrollY>40);sc();addEventListener('scroll',sc,{passive:true});
+bg.onclick=()=>{const o=m.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
+m.querySelectorAll('a').forEach(a=>a.onclick=()=>{m.classList.remove('open');bg.setAttribute('aria-expanded',false)});
+// testimonials
+const T=[['A beautifully curated collection and an exceptional buying experience. Every detail felt considered.','Adrian M., Collector'],['The condition notes were honest and thorough. I bought with complete confidence.','Rafael S., Private Collector'],['Unhurried, knowledgeable, and discreet. It felt like visiting a friend\u2019s library.','Dimas K., Architect']];
+const qt=document.getElementById('qt'),qa=document.getElementById('qa'),qn=document.getElementById('qn');let qi=0,tm;
+T.forEach((_,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','Testimonial '+(i+1));b.onclick=()=>{clearInterval(tm);show(i)};qn.appendChild(b)});
+function show(i){qi=i;qt.textContent=T[i][0];qa.textContent='\u2014 '+T[i][1];[...qn.children].forEach((b,j)=>b.setAttribute('aria-current',j===i))}
+show(0);tm=setInterval(()=>show((qi+1)%T.length),7000);
+// split headlines
+document.querySelectorAll('h1,h2').forEach(h=>{let i=0;const t=h.textContent.trim();h.setAttribute('aria-label',t);h.innerHTML=t.split(/\s+/).map(w=>`<span class="ww" aria-hidden="true"><span style="--i:${i++}">${w}</span></span>`).join(' ')});
+const trk=document.getElementById('trk');trk.innerHTML+=trk.innerHTML;
+// progress + parallax + cursor
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{bar.style.transform=`scaleX(${scrollY/(document.documentElement.scrollHeight-innerHeight)})`},{passive:true});
+if(matchMedia('(hover:hover) and (pointer:fine)').matches){
+ const cur=document.getElementById('cur'),hero=document.querySelector('.hero');let x=0,y=0,tx=0,ty=0;
+ addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY;cur.classList.add('on');
+  hero.style.setProperty('--mx',(e.clientX/innerWidth-.5)*-26);hero.style.setProperty('--my',(e.clientY/innerHeight-.5)*-18);
+  cur.classList.toggle('big',!!e.target.closest('a,button'))});
+ document.addEventListener('mouseleave',()=>cur.classList.remove('on'));
+ (function L(){x+=(tx-x)*.16;y+=(ty-y)*.16;cur.style.transform=`translate(${x}px,${y}px)`;requestAnimationFrame(L)})();
+}
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv,h1,h2').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
